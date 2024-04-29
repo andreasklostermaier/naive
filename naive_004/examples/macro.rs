@@ -10,8 +10,19 @@ macro_rules! make_path {
     };
 }
 
-#[tokio::main]
-async fn main() {
-    let p = make_path!("/home/naive", "session", '_', 42, "README.txt");
+
+fn main() {
+
+    let a = "/home/naive/";
+    let b = "session";
+    let c = '_';
+    let d = 42;
+    let e = "README.txt".to_string();
+
+    let mut foo = b.to_string();
+    foo.push_str(&c.to_string());
+    foo.push_str(&d.to_string());
+    
+    let p = make_path!(a, b, foo, e);
     dbg!(p);
-    }
+}

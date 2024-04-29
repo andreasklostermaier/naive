@@ -18,7 +18,7 @@ fn main() {
     foo.push_str(&b.to_string());
     
     
-    let pb: PathBuf = [&x, &foo[..], &d].iter().collect();
+    let pb: PathBuf = [&x, &c, &foo[..], &d].iter().collect();
     println!("{:#?}", pb);
     
 }

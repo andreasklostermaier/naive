@@ -20,8 +20,10 @@ fn main() {
         let mut dir = String::from(b);
         dir.push(c);
         dir.push_str(&d.to_string());
+        result.push(b);
         result.push(dir);
         result.push(e);
+        println!("{:?}", result);
         result
     };
     println!("{:#?}", pb);

@@ -1,9 +1,11 @@
 [package]
-name = "naive_004"
+name = "naive_005"
 version = "0.1.0"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-tokio = "1.37"
+ctrlc = "3.4.4"
+tokio = { version = "1.37.0", features = ["full"] }
+tokio-util = { version = "0.7", features = ["rt"] }
