@@ -23,7 +23,7 @@ cargo run --example ctrlc
 
 #### 2. Tokio
 
-The second solution uses Tokio to spawn two green threads with the `tokio::select` macro. The code looks pretty clean and the CTRL-C event is handled immediately. Tokio implements `signal::ctrl_c()` for NIX and Windows and compiles according to the target.
+The second solution uses Tokio to spawn two green threads with the `tokio::select` macro. The code looks pretty clean and the CTRL-C event is handled immediately. Tokio implements `signal::ctrl_c()` for NIX and Windows and compiles according to the target. Also see the [Tokio Signal Module documentation](https://docs.rs/tokio/latest/tokio/signal/index.html).
 
 ```bash
 cargo run --example tokio
